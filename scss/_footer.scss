@@ -1,0 +1,26 @@
+@import "variables";
+
+.footer {
+    background-color: black;
+    padding: 80px 0;
+
+    &__socials {
+        display: flex;
+        column-gap: 40px;
+        margin: 60px 0 60px; 
+    }
+
+    &__socials-icon {
+        color: $accent-color;
+    }
+
+    &__socials-icon:hover {
+        color: white;
+    }
+
+    &__copyright-text {
+        font-size: 12px;
+        color: white;
+    }
+}
+

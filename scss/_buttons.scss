@@ -1,0 +1,44 @@
+@import "variables";
+
+.button {
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    width: 255px;
+    padding: 25px 0;
+    border-radius: 18px;      
+    outline: none;          
+
+    &--theme--red-white {
+        color: white;
+        background-color: $accent-color;        
+    }
+
+    &--theme--red-white:hover {
+        color: $accent-color;
+        background-color: transparent;
+        border: 1px solid $accent-color;        
+    }
+
+    &--theme--transparent-white {
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+    }
+
+    &--theme--transparent-white:hover {
+        border: none;
+        background-color: $accent-color;
+    }
+}
+
+.search-button {
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    background-color: transparent;
+
+    &:hover {
+        color: $accent-color;
+        cursor: pointer;
+    }
+}

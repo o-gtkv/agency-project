@@ -1,0 +1,35 @@
+.page-section {
+    padding: 80px 0;
+
+    &__title {        
+        text-transform: capitalize;        
+        text-align: center;
+    }    
+
+    &__desc {
+        text-align: center;
+    }
+
+    &--bg-1 {
+        background-color: white;
+    }
+    
+    &--bg-2 {
+        background-color: #f5f5f5;
+    }
+
+    &--bg-3 {
+        background-color: #2d3f51;
+    }    
+}
+
+.slider-page-section {
+    height: 950px;
+    max-height: 950px;
+    background: url(../img/slider-1-bg.png) center no-repeat;    
+}
+
+.client-comment-section {
+    background: url('../img/bg.png') center no-repeat;
+}
+
