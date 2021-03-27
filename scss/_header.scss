@@ -29,6 +29,7 @@
 
     &__socials-icon:hover {
         color: $accent-color;
+        transition: .2s ease-in-out;
     }
 
     &__socials-wrapper,

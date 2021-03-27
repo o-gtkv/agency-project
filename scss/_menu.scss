@@ -10,9 +10,8 @@
     }
 
     &__item:hover {
-        // display: flex;
-        // align-items: flex-end;
         border-color: white;
+        transition: .2s ease-in-out;
     }
 
     &__link {

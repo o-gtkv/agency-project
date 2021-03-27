@@ -124,14 +124,22 @@ h3 {
 }
 
 .service-block {
+  text-align: center;
   margin-top: 30px;
   padding: 50px 45px;
   background-color: white;
+  transition: 0.2s ease-in-out;
+}
+.service-block:hover {
   box-shadow: 0px 0px 15px 5px #dedede;
+}
+.service-block:hover .hypogen {
+  stroke: black;
+  transition: 0.2s ease-in-out;
 }
 
 .work-process-stage {
-  border: 1px solid white;
+  text-align: center;
 }
 .work-process-stage--margin {
   margin: 80px 0;
@@ -166,6 +174,36 @@ h3 {
 
 .client-comment-slider--margin {
   margin-bottom: 70px;
+}
+
+.hypogen {
+  width: 100px;
+  height: 100px;
+  stroke-width: 2px;
+  margin-bottom: 30px;
+}
+.hypogen--fg--white {
+  stroke: white;
+}
+.hypogen--fg--accent {
+  stroke: #c8342d;
+}
+.hypogen__text {
+  font: normal 26px "Open Sans";
+  dominant-baseline: middle;
+  text-anchor: middle;
+  left: 50%;
+  top: 50%;
+}
+.hypogen__polygon {
+  fill: none;
+}
+.hypogen__icon {
+  transform: translate(25%, 25%);
+}
+.hypogen:hover {
+  stroke: #c8342d;
+  transition: 0.2s ease-in-out;
 }
 
 [class*=col-] {
@@ -259,11 +297,13 @@ h3 {
 .button--theme--red-white {
   color: white;
   background-color: #c8342d;
+  border: 1px solid #c8342d;
 }
 .button--theme--red-white:hover {
   color: #c8342d;
   background-color: transparent;
   border: 1px solid #c8342d;
+  transition: 0.2s ease-in-out;
 }
 .button--theme--transparent-white {
   color: white;
@@ -273,6 +313,7 @@ h3 {
 .button--theme--transparent-white:hover {
   border: none;
   background-color: #c8342d;
+  transition: 0.2s ease-in-out;
 }
 
 .search-button {
@@ -284,6 +325,7 @@ h3 {
 .search-button:hover {
   color: #c8342d;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .header {
@@ -311,6 +353,7 @@ h3 {
 }
 .header__socials-icon:hover {
   color: #c8342d;
+  transition: 0.2s ease-in-out;
 }
 .header__socials-wrapper, .header__logo-wrapper, .header__menu-wrapper {
   display: flex;
@@ -347,6 +390,7 @@ h3 {
 }
 .menu__item:hover {
   border-color: white;
+  transition: 0.2s ease-in-out;
 }
 .menu__link {
   color: white;
@@ -491,6 +535,7 @@ h3 {
 .tab-bar__item--active {
   color: #c8342d;
   border: 1px solid #c8342d;
+  transition: 0.2s ease-in-out;
 }
 
 .tab-container__content img {
@@ -520,6 +565,7 @@ h3 {
 }
 .footer__socials-icon:hover {
   color: white;
+  transition: 0.2s ease-in-out;
 }
 .footer__copyright-text {
   font-size: 12px;
@@ -639,10 +685,6 @@ h3 {
 @media (max-width: 767px) {
   .main-slider--margin {
     margin-bottom: 100px;
-  }
-
-  .about-work {
-    margin-top: 10px;
   }
 
   .page-review-block {

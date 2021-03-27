@@ -1,7 +1,7 @@
 @import "variables";
 
 * {
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +20,7 @@ p {
     padding-top: 30px;
 }
 
-p + p {
+p+p {
     padding-bottom: 30px;
 }
 
@@ -36,7 +36,7 @@ h3 {
     font-size: 24px;
 }
 
-.title {    
+.title {
     text-transform: uppercase;
     font-weight: bold;
 
@@ -49,11 +49,11 @@ h3 {
     }
 }
 
-.text {                     
+.text {
     opacity: 0.7;
     line-height: calc(1em + 10px);
 
-    &--opacity--off {                
+    &--opacity--off {
         opacity: 1;
     }
 
@@ -77,13 +77,13 @@ h3 {
     text-transform: uppercase;
     text-decoration: none;
 
-    &:hover {        
+    &:hover {
         color: $accent-color;
     }
 }
 
 .news-snippet {
-    box-shadow: 0px 0px 15px 5px #dedede;    
+    box-shadow: 0px 0px 15px 5px #dedede;
 
     &__date {
         margin-right: 20px;
@@ -99,26 +99,26 @@ h3 {
     &__main--margin {
         margin-top: 80px;
     }
-    
+
     &--margin {
         margin-top: 40px;
     }
-    
+
     &__info-block {
         padding: 40px 30px 40px;
     }
 }
 
 .page-review-block {
-    display: flex;    
-    box-shadow: 0px 0px 20px 20px #f3f4f4;    
+    display: flex;
+    box-shadow: 0px 0px 20px 20px #f3f4f4;
 
-    &--margin + &--margin {
+    &--margin+&--margin {
         margin-top: 40px;
     }
 
-    &__info {                        
-        padding: 40px 0 40px 30px;        
+    &__info {
+        padding: 40px 0 40px 30px;
 
         &-desc {
             margin-bottom: 45px;
@@ -127,34 +127,46 @@ h3 {
 
     &__picture {
         display: flex;
-        flex-basis: 100%;        
-        padding-left: 30px;        
+        flex-basis: 100%;
+        padding-left: 30px;
 
         &-img {
             align-self: center;
         }
     }
 }
-   
+
 .page-section-portfolio {
     &__button {
         margin-top: 55px;
     }
-    
+
     &__tab-bar {
         margin: 70px 0;
     }
-}    
-
-.service-block {
-    margin-top: 30px;
-    padding: 50px 45px;
-    background-color: white;    
-    box-shadow: 0px 0px 15px 5px #dedede;       
 }
 
-.work-process-stage {    
-    border: 1px solid white;
+.service-block {
+    $transition: .2s ease-in-out;
+
+    text-align: center;
+    margin-top: 30px;
+    padding: 50px 45px;
+    background-color: white;
+    transition: $transition;
+
+    &:hover {
+        box-shadow: 0px 0px 15px 5px #dedede;
+    }
+    
+    &:hover .hypogen {
+        stroke: black;
+        transition: $transition;
+    }
+}
+
+.work-process-stage {
+    text-align: center;    
 
     &--margin {
         margin: 80px 0;
@@ -184,7 +196,7 @@ h3 {
         margin-top: 40px;
 
         &-icon {
-            color: $accent-color;            
+            color: $accent-color;
         }
     }
 }
@@ -196,4 +208,40 @@ h3 {
 
 .client-comment-slider--margin {
     margin-bottom: 70px;
+}
+
+.hypogen {
+    width: 100px;
+    height: 100px;    
+    stroke-width: 2px;
+    margin-bottom: 30px;
+    
+    &--fg--white {
+        stroke: white;
+    }
+    
+    &--fg--accent {
+        stroke: $accent-color;
+    }
+
+    &__text {
+        font: normal 26px "Open Sans";
+        dominant-baseline: middle;
+        text-anchor: middle;
+        left: 50%;
+        top: 50%
+    }
+
+    &__polygon {
+        fill: none;      
+    }
+
+    &__icon {                         
+        transform: translate(25%, 25%);
+    }
+
+    &:hover {
+        stroke: $accent-color;
+        transition: .2s ease-in-out;
+    }
 }
