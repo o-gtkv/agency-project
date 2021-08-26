@@ -16,9 +16,6 @@
     background-color: white;
 }
 
-
-.swiper-container-horizontal>.swiper-pagination-bullets, 
-.swiper-pagination-custom, 
-.swiper-pagination-fraction {
-    bottom: 0;
+.swiper-pagination {
+    padding-bottom: 30px;    
 }

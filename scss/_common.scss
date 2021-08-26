@@ -110,38 +110,37 @@ h3 {
     }
 }
 
-.page-review-block {
+.common-info {
     display: flex;
     box-shadow: 0px 0px 20px 20px #f3f4f4;
 
-    &--margin+&--margin {
-        margin-top: 40px;
+    &__info {
+        padding: 40px 0 40px 30px;     
     }
 
-    &__info {
-        padding: 40px 0 40px 30px;
-
-        &-desc {
-            margin-bottom: 45px;
-        }
+    &__info-desc {
+        margin-bottom: 45px;
     }
 
     &__picture {
         display: flex;
         flex-basis: 100%;
         padding-left: 30px;
+    }
 
-        &-img {
-            align-self: center;
-        }
+    &__picture-img {
+        align-self: center;
     }
 }
 
-.service-block {
+.common-info + .common-info {
+    margin-top: 40px;
+}
+
+.service {
     $transition: .2s ease-in-out;
 
-    text-align: center;
-    margin-top: 30px;
+    text-align: center;    
     padding: 50px 45px;
     background-color: white;
     transition: $transition;
@@ -156,14 +155,6 @@ h3 {
     }
 }
 
-.work-process-stage {
+.ta-center {
     text-align: center;    
-
-    &--margin {
-        margin: 80px 0;
-    }
-}
-
-.slide-button {
-    margin-top: 30px;
 }
