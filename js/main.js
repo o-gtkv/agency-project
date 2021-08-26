@@ -1,47 +1,43 @@
-function SearchForm() {
-    this.form = document.querySelector('.form-search')
-    this.searchButton = document.querySelector('.form-search__button')
-    this.textField = document.querySelector('.form-search__text-field')
-    this.closeButton = document.querySelector('.form-search__close-button')    
+class SearchForm {
+    form = document.querySelector('.form-search')
+    textField = document.querySelector('.form-search__text-field')
+    closeButton = document.querySelector('.form-search__close-button')    
 
-    this.show = function() {
+    show = () => {
         this.form.classList.add('form-search--visible')        
     }
 
-    this.hide = function() {
+    hide = () => {
         this.form.classList.remove('form-search--visible')        
     }
 
-    this.focus = function() {
+    focus = () => {
         this.textField.focus()
+    }    
+
+    constructor() {
+        this.closeButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            this.hide()
+        })    
     }
-
-    this.closeButton.addEventListener('click', (e) => {
-        e.preventDefault()
-        this.hide()
-    })
-
 }
 
 const searchForm = new SearchForm();
-const searchButton = document.querySelector('.search-button')
-searchButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    searchForm.show()
-    searchForm.focus()
+document.querySelectorAll('.search-button').forEach(sb => {
+    sb.addEventListener('click', (e) => {
+        e.preventDefault()
+        searchForm.show()
+        searchForm.focus()
+    })
 })
 
 // ===============================================
 // === changing header's bg color on scrolling ===
 // ===============================================
-const header = document.querySelector('.header');
 window.addEventListener('scroll', (e) => {
-    if (window.scrollY > 0) {            
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'
-    } else {
-        header.style.backgroundColor = 'transparent'
-    }    
-} )
+    document.querySelector('.header').style.backgroundColor = window.scrollY > 0 ? 'rgba(0, 0, 0, 0.8)' : 'transparent'
+})
 
 // ===========================================
 // === mobile menu ===

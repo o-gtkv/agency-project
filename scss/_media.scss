@@ -1,20 +1,48 @@
 @import "grid";
-
+@import "common";
 
 @media (max-width: 767px) {
+    .section-pages__desc {
+        margin-top: 30px;  
+        display: flex;        
+        flex-direction: column;
+        align-items: center;        
+
+        > .text, .title {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
     .main-slider--margin {
         margin-bottom: 100px;
     }
 
-    .client-comment-slider--margin {
-        // margin-bottom: 100px;
+    .work-process-stage {    
+        &--margin {
+            margin: 40px 0;
+        }
+    }
+
+    .service-block {        
+        margin-top: 10px;
+        padding: 25px 45px;
     }
 
     .page-review-block {        
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;    
+        justify-content: center;                            
 
-        &__picture {
-            padding-left: 30px;
+        &__picture {   
+            display: block;
+            text-align: center;
+            padding: 0;
+        }
+
+        &__info {
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
@@ -27,17 +55,15 @@
     }    
 }
 
-@media (min-width: 768px) {
-    .page-section-pages {       
-        &__desc {
-            align-self: center;        
-            margin-left: -30px;
-        }
+@media (min-width: 768px) {    
+    .section-pages__desc {
+        align-self: center;        
+        margin-left: -30px;
     }
     
     .page-review-block {
         &__picture {
-            justify-content: flex-end;
+            justify-content: flex-end;            
         }
     }    
 

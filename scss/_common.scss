@@ -37,14 +37,15 @@ h3 {
 }
 
 .title {
+    line-height: 1.2;
     text-transform: uppercase;
     font-weight: bold;
 
-    &--fw--normal {
+    &-fw-normal {
         font-weight: normal;
     }
 
-    &--fg--white {
+    &-fg-white {
         color: white;
     }
 }
@@ -53,19 +54,19 @@ h3 {
     opacity: 0.7;
     line-height: calc(1em + 10px);
 
-    &--opacity--off {
+    &-opacity-off {
         opacity: 1;
     }
 
-    &--fg--accent-color {
+    &-fg-accent-color {
         color: $accent-color;
     }
 
-    &--fg--white {
+    &-fg-white {
         color: white;
     }
 
-    &--upcase-bold {
+    &-upcase-bold {
         text-transform: uppercase;
         font-weight: bold;
     }
@@ -136,16 +137,6 @@ h3 {
     }
 }
 
-.page-section-portfolio {
-    &__button {
-        margin-top: 55px;
-    }
-
-    &__tab-bar {
-        margin: 70px 0;
-    }
-}
-
 .service-block {
     $transition: .2s ease-in-out;
 
@@ -173,75 +164,6 @@ h3 {
     }
 }
 
-.comment {
-    &__photo {
-        margin: 80px 0 20px;
-    }
-
-    &__role {
-        font-size: 12px;
-        font-weight: bold;
-        text-transform: capitalize;
-        color: $accent-color;
-    }
-
-    &__name {
-        font-weight: bold;
-        color: white;
-        text-transform: uppercase;
-        margin: 10px 0 20px;
-    }
-
-    &__client-rate {
-        margin-top: 40px;
-
-        &-icon {
-            color: $accent-color;
-        }
-    }
-}
-
-.main-slider--margin {
-    margin-top: 315px;
-    margin-bottom: 305px;
-}
-
-.client-comment-slider--margin {
-    margin-bottom: 70px;
-}
-
-.hypogen {
-    width: 100px;
-    height: 100px;    
-    stroke-width: 2px;
-    margin-bottom: 30px;
-    
-    &--fg--white {
-        stroke: white;
-    }
-    
-    &--fg--accent {
-        stroke: $accent-color;
-    }
-
-    &__text {
-        font: normal 26px "Open Sans";
-        dominant-baseline: middle;
-        text-anchor: middle;
-        left: 50%;
-        top: 50%
-    }
-
-    &__polygon {
-        fill: none;      
-    }
-
-    &__icon {                         
-        transform: translate(25%, 25%);
-    }
-
-    &:hover {
-        stroke: $accent-color;
-        transition: .2s ease-in-out;
-    }
+.slide-button {
+    margin-top: 30px;
 }

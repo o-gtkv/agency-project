@@ -1,0 +1,37 @@
+@import "variables";
+
+.hypogen {
+    width: 100px;
+    height: 100px;    
+    stroke-width: 2px;
+    margin-bottom: 30px;
+    
+    &--fg--white {
+        stroke: white;
+    }
+    
+    &--fg--accent {
+        stroke: $accent-color;
+    }
+
+    &__text {
+        font: normal 26px "Open Sans";
+        dominant-baseline: middle;
+        text-anchor: middle;
+        left: 50%;
+        top: 50%
+    }
+
+    &__polygon {
+        fill: none;      
+    }
+
+    &__icon {                         
+        transform: translate(25%, 25%);
+    }
+
+    &:hover {
+        stroke: $accent-color;
+        transition: .2s ease-in-out;
+    }
+}

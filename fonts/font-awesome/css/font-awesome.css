@@ -520,7 +520,7 @@
 .fa-random:before {
   content: "\f074";
 }
-.fa-comment:before {
+.fa-testimonial:before {
   content: "\f075";
 }
 .fa-magnet:before {
@@ -570,7 +570,7 @@
 .fa-cogs:before {
   content: "\f085";
 }
-.fa-comments:before {
+.fa-testimonials:before {
   content: "\f086";
 }
 .fa-thumbs-o-up:before {
@@ -816,10 +816,10 @@
 .fa-tachometer:before {
   content: "\f0e4";
 }
-.fa-comment-o:before {
+.fa-testimonial-o:before {
   content: "\f0e5";
 }
-.fa-comments-o:before {
+.fa-testimonials-o:before {
   content: "\f0e6";
 }
 .fa-flash:before,
@@ -2008,10 +2008,10 @@
 .fa-map:before {
   content: "\f279";
 }
-.fa-commenting:before {
+.fa-testimonialing:before {
   content: "\f27a";
 }
-.fa-commenting-o:before {
+.fa-testimonialing-o:before {
   content: "\f27b";
 }
 .fa-houzz:before {

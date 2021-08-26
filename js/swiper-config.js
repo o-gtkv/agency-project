@@ -8,11 +8,11 @@ const swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
     },
 
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    // },
 
     autoplay: {
-        delay: 5000,
+        delay: 3000,
     },
 });
