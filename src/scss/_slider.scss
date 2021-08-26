@@ -1,0 +1,22 @@
+.swiper-container {
+    overflow: hidden;
+}
+
+.swiper-container-top {    
+    padding: 150px 0 100px;    
+    background: url(../img/slider-1-bg.png) center no-repeat;
+}
+
+.swiper-slide {
+    text-align: center;    
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {    
+    background-color: white;    
+}
+
+.swiper-pagination {
+    position: relative;
+    top: 50px;
+}

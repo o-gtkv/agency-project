@@ -10,20 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/o-gtkv/agency-project.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Oleg-G",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/o-gtkv/agency-project/issues"
   },
   "homepage": "https://github.com/o-gtkv/agency-project#readme",
   "devDependencies": {
+    "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
-    "run-sequence": "^2.2.1"
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.38.1"
   }
 }
