@@ -1,8 +1,10 @@
+@use "sass:math";
+
 @mixin define-col($size) {
     $n: 12;
 
     @for $i from 1 through $n {
-        $width: $i / $n * 100;
+        $width: math.div($i, $n) * 100;
 
         .col-#{$size}-#{$i} {
             flex: 0 0 #{$width}#{"%"};

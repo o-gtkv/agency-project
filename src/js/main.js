@@ -1,31 +1,9 @@
-class SearchForm {
-    form = document.querySelector('.form-search')
-    textField = document.querySelector('.form-search__text-field')
-    closeButton = document.querySelector('.form-search__close-button')    
-
-    show = () => {
-        this.form.classList.add('form-search--visible')        
-    }
-
-    hide = () => {
-        this.form.classList.remove('form-search--visible')        
-    }
-
-    focus = () => {
-        this.textField.focus()
-    }    
-
-    constructor() {
-        this.closeButton.addEventListener('click', (e) => {
-            e.preventDefault()
-            this.hide()
-        })    
-    }
-}
+import SearchForm from "./search-form"
 
 const searchForm = new SearchForm();
-document.querySelectorAll('.search-button').forEach(sb => {
-    sb.addEventListener('click', (e) => {
+const searchButtons = document.querySelectorAll('.search-button')
+searchButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
         e.preventDefault()
         searchForm.show()
         searchForm.focus()
@@ -36,7 +14,8 @@ document.querySelectorAll('.search-button').forEach(sb => {
 // === changing header's bg color on scrolling ===
 // ===============================================
 window.addEventListener('scroll', (e) => {
-    document.querySelector('.header').style.backgroundColor = window.scrollY > 0 ? 'rgba(0, 0, 0, 0.8)' : 'transparent'
+    const header = document.querySelector('.header')
+    header.style.backgroundColor = window.scrollY > 0 ? 'rgba(0, 0, 0, 0.8)' : 'transparent'
 })
 
 // ===========================================
@@ -46,13 +25,14 @@ const mobileMenu = document.querySelector('.mobile-menu')
 const mainMenu = document.querySelector('.menu')
 
 mobileMenu.addEventListener('click', function() {
+    console.log('click')
     mobileMenu.classList.toggle('mobile-menu--active')
-    if (mobileMenu.classList.contains('mobile-menu--active')) {
-        mainMenu.classList.add('mobile-menu--active')
-    } else  {
-        mainMenu.classList.remove('mobile-menu--active')
-    }
-
+    mainMenu.classList.toggle('mobile-menu--active')
+    // if (mobileMenu.classList.contains('mobile-menu--active')) {
+    //     mainMenu.classList.add('mobile-menu--active')
+    // } else  {
+    //     mainMenu.classList.remove('mobile-menu--active')
+    // }  
 })
 
 //=========================
@@ -74,8 +54,8 @@ function showTabContent(i = 0) {
     tab[i].classList.add('tab-bar__item--active')
 }
 
-hideTabContent();
-showTabContent(2);
+hideTabContent()
+showTabContent(2)
 
 tabBar.addEventListener('click', function(e) {
     const target = e.target
