@@ -1,5 +1,17 @@
-import SearchForm from "./search-form"
+import SearchForm from './search-form'
 
+new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    },
+    autoplay: {
+        delay: 3000
+    }
+})
 const searchForm = new SearchForm();
 const searchButtons = document.querySelectorAll('.search-button')
 searchButtons.forEach(button => {
@@ -25,14 +37,8 @@ const mobileMenu = document.querySelector('.mobile-menu')
 const mainMenu = document.querySelector('.menu')
 
 mobileMenu.addEventListener('click', function() {
-    console.log('click')
     mobileMenu.classList.toggle('mobile-menu--active')
-    mainMenu.classList.toggle('mobile-menu--active')
-    // if (mobileMenu.classList.contains('mobile-menu--active')) {
-    //     mainMenu.classList.add('mobile-menu--active')
-    // } else  {
-    //     mainMenu.classList.remove('mobile-menu--active')
-    // }  
+    mainMenu.classList.toggle('mobile-menu--active') 
 })
 
 //=========================
