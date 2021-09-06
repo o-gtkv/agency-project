@@ -5,7 +5,8 @@
   "private": "true",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
-    "build": "cross-env NODE_ENV=production gulp build"
+    "build": "cross-env NODE_ENV=production gulp build",
+    "buildDev": "cross-env NODE_ENV=development gulp buildDev"
   },
   "repository": {
     "type": "git",

@@ -152,9 +152,10 @@ function cleanTask(cb) {
 
 //----------------------------------------------------------------
 exports.clean = cleanTask
+exports.buildDev = series(parallel(scssTask, buildJSTask), buildHTMLTask), 
 exports.default = parallel(
     series(
-        parallel(buildCSSTask, buildJSTask), 
+        parallel(scssTask, buildJSTask), 
         buildHTMLTask
     ), 
     browserSyncTask
