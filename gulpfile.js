@@ -20,6 +20,7 @@ const DIST_DIR = './dist'
 const SRC_JS_BUNDLE_FILES = './src/js/bundle/**/*.js'
 const SRC_HTML_DIR = SRC_DIR + '/html'
 const DIST_CSS_FILES = DIST_DIR + '/css/**/*.css'
+const SRC_HTML_FILES = SRC_HTML_DIR + '/*.html'
 
 const SRC_CSS_DIR = './src/css'
 const SRC_JS_DIR = './src/js'
@@ -27,7 +28,6 @@ const SRC_JS_BUNDLE_DIR = SRC_JS_DIR + '/bundle'
 const SRC_IMG_FILES = './src/img/**/*.{jpg,png,svg,gif}'
 const SRC_CSS_FILES = SRC_CSS_DIR + '/*.css'
 const SRC_SCSS_FILES = './src/scss/**/*.scss'
-const SRC_HTML_FILES = './src/*.html'
 const SRC_JS_FILES = './src/js/**/*.js'
 const SRC_FONTS_FILES = './src/fonts/**/*'
 
@@ -47,7 +47,7 @@ function browserSyncTask(cb) {
         SRC_JS_FILES,
         '!' + SRC_JS_DIR + '/*.bundle.js'
     ]).on('change', () => {buildJSTask(cb); browserSync.reload()})
-    browserSync.watch(SRC_HTML_FILES).on('change', browserSync.reload)    
+    browserSync.watch(SRC_HTML_FILES).on('change', () => buildHTMLTask(cb))    
     browserSync.watch(SRC_SCSS_FILES).on('change', () => scssTask(cb))
     cb()
 }
@@ -93,6 +93,7 @@ function buildCSSTask(cb) {
         .pipe(rename({extname: ".min.css"}))
         .pipe(hash())
         .pipe(dest(DIST_CSS_DIR))
+        .pipe(browserSync.stream())
     cb()
 }
 
@@ -133,6 +134,7 @@ function buildHTMLTask(cb) {
         }
     }))
         .pipe(dest(destDir))
+        .pipe(browserSync.stream())
     cb()
 }
 
