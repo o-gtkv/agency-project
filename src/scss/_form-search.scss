@@ -1,43 +1,46 @@
 @import "variables";
 
 .form-search {
-    display: none;
-    background-color: $transparent-black;     
-    border-radius: 18px;        
-    padding: 15px;
-    width: 33%;    
-    min-width: 300px;    
-    margin: 0 auto;
-    position: absolute;
+    display: flex;
+    position: absolute;    
     right: 0;
     left: 0;
-    top: 150px;
-    z-index: 100;
-
-    &--visible {
-        display: flex;
-    }
+    top: 20%;    
+    border-radius: 18px;        
+    padding: 25px;
+    width: 33%;    
+    min-width: 300px;    
+    margin: 0 auto;    
+    background-color: rgba(white, 0.95);
+    z-index: 100;    
 
     &__text-field {                
         flex-grow: 1;
-        color: white;
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid white; 
+        line-height: 1.5;
+        border-bottom: 1px solid black; 
         padding: 0;              
-        outline: none;  
+        outline: none;          
+        font-size: $main-font-size;
+        font-family: $main-font-family;
     }
 
     &__close-button,
     &__search-button {        
-        color: white;
         background-color: transparent;
         border: none;
         outline: none;
         cursor: pointer;
+        font-size: 24px;        
     }    
 
-    &__close-button {
-        margin-left: 10px;        
+    &__close-button:hover,
+    &__search-button:hover {
+        color: $accent-color;
     }
+
+    // &__close-button {
+    //     margin-left: 10px;        
+    // }
 }

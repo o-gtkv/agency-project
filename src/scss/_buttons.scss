@@ -38,8 +38,12 @@
     }
 }
 
-.search-button {
-    padding-left: 30px;
+.footer__search-button,
+.header__search-button {
+    margin-left: 30px;
+}
+
+.search-button {    
     text-transform: uppercase;
     border: none;
     color: white;

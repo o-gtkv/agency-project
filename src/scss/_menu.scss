@@ -36,6 +36,11 @@
         position: relative;
         width: 15px;
         height: 15px;
+        cursor: pointer;        
+    }
+
+    .mobile-menu:hover span {
+        background-color: $accent-color;
     }
 
     .mobile-menu span {

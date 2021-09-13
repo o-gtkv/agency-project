@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -63,19 +63,10 @@
                 <span></span>
                 <span></span>   
             </div>
-            <button class="search-button">
+            <button class="search-button header__search-button">
                 <i class="fa fa-search"></i>
             </button>
         </div>
-        <form class="form-search">
-            <input class="form-search__text-field" type="text" autofocus>
-            <button type="submit" class="form-search__search-button">
-                <i class="fa fa-search"></i>
-            </button>
-            <button class="form-search__close-button">
-                <i class="fa fa-close"></i>
-            </button>
-        </form>
     </header>
     <section class="slider-section">        
         <div class="swiper-container swiper-container-top">
@@ -547,7 +538,7 @@
                         <a href="" class="menu__link">contact</a>
                     </li>
                 </ul>
-                <button class="search-button">
+                <button class="search-button footer__search-button">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
@@ -575,6 +566,18 @@
             </div>
         </div>
     </footer>
+
+    <div id="form-search" class="overlay">
+        <form class="form-search">
+            <input class="form-search__text-field" type="text" name="search" autofocus>
+            <button type="submit" class="form-search__search-button">
+                <i class="fa fa-search"></i>
+            </button>
+            <button class="form-search__close-button">
+                <i class="fa fa-close"></i>
+            </button>
+        </form>
+    </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/bundle/main.bundle.js"></script>    
