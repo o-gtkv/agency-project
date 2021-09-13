@@ -11,6 +11,12 @@ class SearchForm {
                 e.preventDefault();
             }
         });    
+
+        this.form.addEventListener('keyup', (e) => {
+            if (e.code === 'Escape') {
+                this.hide();
+            }
+        });
     }
 
     show = () => {
